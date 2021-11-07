@@ -1,0 +1,74 @@
+using System;
+namespace prouecto
+{
+ class Program
+ 
+ {
+ public static void Main(string[] args)
+ {
+ double pi = 3.14;
+ double resultado;
+ Console.WriteLine(" *************************************");
+ Console.WriteLine(" PROGRAMA PARA GEOMETRIA");
+ Console.WriteLine(" *************************************");
+ Console.WriteLine(" ¿Qué area desea Calcular?");
+ Console.WriteLine(" (c) Circulo");
+ Console.WriteLine(" (r) Rectángulo");
+ Console.WriteLine(" (t) triángulo");
+ Console.WriteLine(" (s) Salir");
+ 
+ string userName = Console.ReadLine();
+ 
+ switch (userName)
+ {
+ case "c":
+ Console.WriteLine("Ingrese Radio");
+ double vradio = Convert.ToInt32(Console.ReadLine());
+ double circulo = f_circulo (vradio); //llamada funcion
+ //resultado = pi * (vradio * vradio);
+ Console.WriteLine(circulo);
+ break;
+ case "r":
+ Console.WriteLine("Ingrese la Base");
+ double vbase = Convert.ToInt32(Console.ReadLine());
+ Console.WriteLine("Ingrese la Altura");
+ double valtura = Convert.ToInt32(Console.ReadLine());
+ //resultado = vbase * valtura;
+ double rectangulo = f_rectangulo (vbase, valtura); //llamada funcion
+ Console.WriteLine("El Resultado es: " + rectangulo);
+ break;
+ case "t":
+ Console.WriteLine("Ingrese la Base");
+ double vbase2 = Convert.ToInt32(Console.ReadLine());
+ Console.WriteLine("Ingrese la Altura");
+ double valtura2 = Convert.ToInt32(Console.ReadLine());
+ //resultado = (vbase2 * valtura2) / 2;
+ double triangulo = f_triangulo (vbase2, valtura2); //llamada funcion
+ Console.WriteLine("El Resultado es: " + triangulo);
+ break;
+ case "s":
+ Console.WriteLine("No hay Calculo ");
+ break;
+ }
+ 
+ //Declaracion Funcion Circulo
+ public static int _circulor(double vradio){
+ circulo = pi * (vradio * vradio);
+ return circulo;
+ }
+ //Declaracion Funcion Rectangulo
+ public static int _circulor(double vbase, double valtura){
+ rectangulo = vbase * valtura;
+ return rectangulo;
+ }
+ //Declaracion Funcion triangulo
+ public static int _circulor(double vbase2, double valtura2){
+ triangulo = (vbase2 * valtura2) / 2;
+ return triangulo;
+ }
+ 
+ Console.Write("Presione cualquier tecla para salir ");
+ Console.ReadKey(true);
+ }
+ }
+}
